@@ -1,8 +1,9 @@
 import Announcment from '../components/Announcment';
 // import Cor from '../components/Cor';
-// import Categories from '../components/Categories';
+import Categories from '../components/Categories';
 import Navbar from '../components/Navbar';
-// import Products from '../components/Products';
+import Newsletter from '../components/Newsletter';
+import Products from '../components/Products';
 // import Slider from '../components/Slider';
 
 function Home() {
@@ -12,8 +13,9 @@ function Home() {
       <Navbar />
       {/* <Cor /> */}
       {/* <Slider /> */}
-      {/* <Categories />
-      <Products /> */}
+      <Categories />
+      <Products />
+      <Newsletter />
     </div>
   );
 }
