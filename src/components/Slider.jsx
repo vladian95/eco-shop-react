@@ -54,7 +54,7 @@ const Image = styled.img`
 
 const InfoContainer = styled.div`
 flex: 1;
-padding: 50px:  
+padding: 50px:
 `;
 
 const Title = styled.h1`
@@ -77,28 +77,30 @@ const Slider = () => {
   };
 
   return (
-    <Container>
-      <Arrow direction="left" onClick={() => handleClick('left')}>
-        <ArrowLeftOutlined />
-      </Arrow>
-      <Wrapper slideIndex={slideIndex}>
-        {sliderItems.map((item) => (
-          <Slide bg={item.bg} key={item.id}>
-            <ImgContainer>
-              <Image src={item.img} />
-            </ImgContainer>
-            <InfoContainer>
-              <Title>{item.title}</Title>
-              <Desc>{item.desc}</Desc>
-              <Button>button</Button>
-            </InfoContainer>
-          </Slide>
-        ))}
-      </Wrapper>
-      <Arrow direction="right" onClick={() => handleClick('right')}>
-        <ArrowRightOutlined />
-      </Arrow>
-    </Container>
+    <>
+      <Container>
+        <Arrow direction="left" onClick={() => handleClick('left')}>
+          <ArrowLeftOutlined />
+        </Arrow>
+        <Wrapper slideIndex={slideIndex}>
+          {sliderItems.map((item) => (
+            <Slide bg={item.bg} key={item.id}>
+              <ImgContainer>
+                <Image src={item.img} />
+              </ImgContainer>
+              <InfoContainer>
+                <Title>{item.title}</Title>
+                <Desc>{item.desc}</Desc>
+                <Button>button</Button>
+              </InfoContainer>
+            </Slide>
+          ))}
+        </Wrapper>
+        <Arrow direction="right" onClick={() => handleClick('right')}>
+          <ArrowRightOutlined />
+        </Arrow>
+      </Container>
+    </>
   );
 };
 
